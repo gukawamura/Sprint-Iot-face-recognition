@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Login Facial</h1>
+    
+    <button id="loginButton" disabled>Carregando Modelos...</button>
+
+    <div class="container" id="video-container">
+        <video id="video" width="640" height="480" muted></video>
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <p id="status">Por favor, clique no botão para iniciar.</p>
+
+    <script defer src="https://unpkg.com/face-api.js@0.22.2/dist/face-api.min.js"></script>
+    <script defer src="script.js"></script>
+
+</body>
+</html>

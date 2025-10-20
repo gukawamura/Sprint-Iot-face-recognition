@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-Vindo!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="welcome-page">
+
+    <h1 id="welcome-message">Bem Vindo!</h1>
+
+    <script>
+        // Este script simples lê o nome da URL e exibe na tela
+        window.onload = function() {
+            // Pega os parâmetros da URL (ex: ?nome=Ana%20Silva)
+            const params = new URLSearchParams(window.location.search);
+            
+            // Tenta pegar o parâmetro 'nome'
+            const nome = params.get('nome');
+            
+            const messageElement = document.getElementById('welcome-message');
+
+            if (nome) {
+                // Se o nome existir, exibe a mensagem personalizada
+                messageElement.innerText = `Bem Vindo, ${nome}!`;
+            } else {
+                // Senão, exibe uma mensagem genérica
+                messageElement.innerText = 'Bem Vindo, Usuário!';
+            }
+        };
+    </script>
+
+</body>
+</html>
